@@ -1,9 +1,14 @@
 import React from 'react';
+import './Footer.css';
+import logo from '../assets/logo.png'; // Adjust the path to your logo image
 
 const Footer = () => {
     return (
-        <footer>
-            <div>
+        <footer className="footer-container">
+            <div className="footer-logo">
+                <img src={logo} alt="Logo" />
+            </div>
+            <div className="footer-section">
                 <h3>Contact</h3>
                 <ul>
                     <li>Email: example@example.com</li>
@@ -11,7 +16,7 @@ const Footer = () => {
                     <li>Address: 123 Example St, City, Country</li>
                 </ul>
             </div>
-            <div>
+            <div className="footer-section">
                 <h3>Doormat</h3>
                 <ul>
                     <li>Home</li>
@@ -20,13 +25,12 @@ const Footer = () => {
                     <li>Contact</li>
                 </ul>
             </div>
-            <div>
+            <div className="footer-section">
                 <h3>Social Media Links</h3>
                 <ul>
                     <li>Facebook</li>
                     <li>Twitter</li>
                     <li>Instagram</li>
-                    <li>LinkedIn</li>
                 </ul>
             </div>
         </footer>

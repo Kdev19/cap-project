@@ -34,17 +34,20 @@ const testimonials = [
 
 const Testimonials = () => {
     return (
-        <div className="testimonials-grid">
-            {testimonials.map((testimonial) => (
-                <div key={testimonial.id} className="testimonial-card">
-                    <img src={testimonial.photo} alt={testimonial.name} className="testimonial-photo" />
-                    <h3>{testimonial.name}</h3>
-                    <div className="testimonial-rating">
-                        {'★'.repeat(testimonial.rating)}{'☆'.repeat(5 - testimonial.rating)}
+        <div className="testimonials-container">
+            <h2>Testimonials</h2>
+            <div className="testimonials-grid">
+                {testimonials.map((testimonial) => (
+                    <div key={testimonial.id} className="testimonial-card">
+                        <img src={testimonial.photo} alt={testimonial.name} className="testimonial-photo" />
+                        <h3>{testimonial.name}</h3>
+                        <div className="testimonial-rating">
+                            {'★'.repeat(testimonial.rating)}{'☆'.repeat(5 - testimonial.rating)}
+                        </div>
+                        <p>{testimonial.review}</p>
                     </div>
-                    <p>{testimonial.review}</p>
-                </div>
-            ))}
+                ))}
+            </div>
         </div>
     );
 };

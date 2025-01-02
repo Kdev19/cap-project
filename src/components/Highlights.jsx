@@ -4,7 +4,7 @@ import './Highlights.css';
 const Highlights = () => {
     return (
         <div className="highlights-container">
-            <div className="sidebar">
+            <div className="header">
                 <h2>Specials</h2>
                 <button className="online-menu-button">Online Menu</button>
             </div>
@@ -14,6 +14,7 @@ const Highlights = () => {
                     <div className="card-content">
                         <h3>Dish Name 1</h3>
                         <p>Description of the dish 1.</p>
+                        <a href="#" className="order-link">Order a delivery</a>
                     </div>
                 </div>
                 <div className="card">
@@ -21,6 +22,7 @@ const Highlights = () => {
                     <div className="card-content">
                         <h3>Dish Name 2</h3>
                         <p>Description of the dish 2.</p>
+                        <a href="#" className="order-link">Order a delivery</a>
                     </div>
                 </div>
                 <div className="card">
@@ -28,6 +30,7 @@ const Highlights = () => {
                     <div className="card-content">
                         <h3>Dish Name 3</h3>
                         <p>Description of the dish 3.</p>
+                        <a href="#" className="order-link">Order a delivery</a>
                     </div>
                 </div>
             </div>
