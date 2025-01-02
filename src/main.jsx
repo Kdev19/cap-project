@@ -10,11 +10,9 @@ createRoot(document.getElementById('root')).render(
     <Highlights />
 
     <Testimonials />
-    
+
     <About />
 
     <Footer />
-
-    <App />
   </StrictMode>,
 )
