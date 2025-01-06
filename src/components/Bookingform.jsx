@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
 import './BookingForm.css';
 
-const BookingForm = () => {
+const BookingForm = ({ availableTimes }) => {
     const [formData, setFormData] = useState({
         date: '',
         time: '',
         guests: 1,
         occasion: ''
     });
-
-    const [availableTimes, setAvailableTimes] = useState([
-        '17:00', '18:00', '19:00', '20:00', '21:00', '22:00'
-    ]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
