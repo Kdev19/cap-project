@@ -11,13 +11,15 @@ import Herosection from './components/Herosection';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter> 
+    <BrowserRouter>
+      <div className="page-container">
         <Nav />
         <Herosection />
         <Highlights />
         <Testimonials />
         <About />
         <Footer />
+      </div>
     </BrowserRouter>
   </StrictMode>
 );
