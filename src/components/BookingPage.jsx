@@ -6,6 +6,7 @@ const BookingPage = ({ availableTimes }) => {
     console.log('availableTimes:', availableTimes); // Log the availableTimes prop
 
     const [formData, setFormData] = useState({
+        date: '',
         time: '',
         guests: 1,
         occasion: ''

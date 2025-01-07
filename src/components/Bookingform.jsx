@@ -6,6 +6,15 @@ const BookingForm = ({ availableTimes, formData, handleChange }) => {
 
     return (
         <form className="booking-form">
+            <label htmlFor="date">Choose a date:</label>
+            <input
+                type="date"
+                id="date"
+                name="date"
+                value={formData.date}
+                onChange={handleChange}
+                required
+            />
             <label htmlFor="time">Choose a time:</label>
             <select id="time" name="time" value={formData.time} onChange={handleChange} required>
                 {availableTimes && availableTimes.map((time, index) => (
