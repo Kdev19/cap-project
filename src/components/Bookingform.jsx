@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './BookingForm.css';
 
 const BookingForm = ({ availableTimes, formData, handleChange }) => {
+    console.log('availableTimes:', availableTimes); // Log the availableTimes prop
+
     return (
         <form>
             <label htmlFor="time">Choose a time:</label>
