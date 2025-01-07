@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-scroll';
 import './Herosection.css';
 
 const Herosection = () => {
@@ -11,9 +10,7 @@ const Herosection = () => {
                     <p className="hero-description">
                         Enjoy the finest dining experience with our exquisite menu and exceptional service.
                     </p>
-                    <Link to="booking" smooth={true} duration={500}>
-                        <button className="hero-button">Reserve a Table</button>
-                    </Link>
+                    <button className="hero-button">Reserve a Table</button>
                 </div>
                 <div className="hero-right">
                     <div className="image-holder">

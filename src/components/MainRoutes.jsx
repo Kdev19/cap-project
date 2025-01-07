@@ -3,7 +3,6 @@ import Herosection from './Herosection';
 import Highlights from './Highlights';
 import Testimonials from './Testimonials';
 import About from './About';
-import BookingPage from './BookingPage';
 
 const MainRoutes = () => {
   return (
@@ -19,9 +18,6 @@ const MainRoutes = () => {
       </section>
       <section id="about">
         <About />
-      </section>
-      <section id="booking">
-        <BookingPage />
       </section>
     </>
   );
