@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import './BookingForm.css';
 
-const BookingForm = ({ availableTimes }) => {
+const BookingForm = ({ availableTimes, updateTimes }) => {
     const [formData, setFormData] = useState({
         date: '',
         time: '',
@@ -15,6 +16,10 @@ const BookingForm = ({ availableTimes }) => {
             ...formData,
             [name]: value
         });
+
+        if (name === 'date') {
+            updateTimes(value);
+        }
     };
 
     const handleSubmit = (e) => {
@@ -74,6 +79,16 @@ const BookingForm = ({ availableTimes }) => {
             <input type="submit" value="Make Your reservation" />
         </form>
     );
+};
+
+BookingForm.propTypes = {
+    availableTimes: PropTypes.array.isRequired,
+    updateTimes: PropTypes.func.isRequired
+};
+
+BookingForm.defaultProps = {
+    availableTimes: [],
+    updateTimes: () => {}
 };
 
 export default BookingForm;
