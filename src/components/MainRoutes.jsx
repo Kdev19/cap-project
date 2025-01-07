@@ -5,7 +5,7 @@ import Testimonials from './Testimonials';
 import About from './About';
 import BookingPage from './BookingPage';
 
-const MainRoutes = ({ availableTimes }) => {
+const MainRoutes = ({ availableTimes, dispatch }) => {
   return (
     <>
       <section id="home">
@@ -21,7 +21,7 @@ const MainRoutes = ({ availableTimes }) => {
         <About />
       </section>
       <section id="booking">
-        <BookingPage availableTimes={availableTimes} />
+        <BookingPage availableTimes={availableTimes} dispatch={dispatch} />
       </section>
     </>
   );

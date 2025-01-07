@@ -1,8 +1,13 @@
 import React from 'react';
 import './BookingForm.css';
 
-const BookingForm = ({ availableTimes, formData, handleChange, handleSubmit }) => {
+const BookingForm = ({ availableTimes, formData, handleChange, handleSubmit, dispatch }) => {
     console.log('availableTimes:', availableTimes); // Log the availableTimes prop
+
+    const handleDateChange = (e) => {
+        handleChange(e);
+        dispatch({ type: 'UPDATE_TIMES', date: e.target.value });
+    };
 
     return (
         <form className="booking-form" onSubmit={handleSubmit}>
@@ -12,7 +17,7 @@ const BookingForm = ({ availableTimes, formData, handleChange, handleSubmit }) =
                 id="date"
                 name="date"
                 value={formData.date}
-                onChange={handleChange}
+                onChange={handleDateChange}
                 required
             />
             <label htmlFor="time">Choose a time:</label>

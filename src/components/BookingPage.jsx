@@ -3,7 +3,7 @@ import BookingForm from './BookingForm';
 import BookingList from './BookingList';
 import './BookingPage.css';
 
-const BookingPage = ({ availableTimes }) => {
+const BookingPage = ({ availableTimes, dispatch }) => {
     console.log('availableTimes:', availableTimes); // Log the availableTimes prop
 
     const [formData, setFormData] = useState({
@@ -38,6 +38,7 @@ const BookingPage = ({ availableTimes }) => {
                 formData={formData}
                 handleChange={handleChange}
                 handleSubmit={handleSubmit}
+                dispatch={dispatch}
             />
             <h2>Available Slots</h2>
             <BookingList availableTimes={availableTimes} bookedTimes={bookedTimes} />
