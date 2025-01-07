@@ -1,21 +1,18 @@
-import { StrictMode, useReducer } from 'react';
+import React, { useReducer, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './index.css';
 import Nav from './components/Nav';
-import Highlights from './components/Highlights';
-import Testimonials from './components/Testimonials';
-import About from './components/About';
 import Footer from './components/Footer';
-import Herosection from './components/Herosection';
-import BookingPage from './components/BookingPage';
 import MainRoutes from './components/MainRoutes';
+import BookingPage from './components/BookingPage';
 
 const initialState = [
   '17:00', '18:00', '19:00', '20:00', '21:00', '22:00'
 ];
 
 const reducer = (state, action) => {
+  console.log('Reducer action:', action); // Debug logs
   switch (action.type) {
     case 'UPDATE_TIMES':
       return action.payload;
@@ -26,36 +23,55 @@ const reducer = (state, action) => {
   }
 };
 
-const App = () => {
+const initializeTimes = () => {
+  return initialState;
+};
+
+const updateTimes = (date) => {
+  console.log('Updating times for date:', date); // Debug
+  const newTimes = initialState.filter(time => time !== '19:00'); // Example logic
+  return newTimes;
+};
+
+function App() {
   const [availableTimes, dispatch] = useReducer(reducer, initialState);
 
-  const updateTimes = (date) => {
-    const newTimes = [
-      '17:00', '18:00', '19:00', '20:00', '21:00', '22:00'
-    ];
-    dispatch({ type: 'UPDATE_TIMES', payload: newTimes });
+  useEffect(() => {
+    console.log('App availableTimes:', availableTimes);
+  }, [availableTimes]);
+
+  const handleUpdateTimes = (date) => {
+    const updatedTimes = updateTimes(date);
+    console.log('App handleUpdateTimes:', updatedTimes);
+    dispatch({ type: 'UPDATE_TIMES', payload: updatedTimes });
   };
 
-  const initializeTimes = () => {
-    dispatch({ type: 'INITIALIZE_TIMES' });
-  };
+  console.log('Passing to BookingPage:', { availableTimes, handleUpdateTimes });
 
   return (
     <div className="page-container">
       <Nav />
       <Routes>
-        <Route path="/booking" element={<BookingPage availableTimes={availableTimes} updateTimes={updateTimes} />} />
+        <Route 
+          path="/booking" 
+          element={
+            <BookingPage 
+              availableTimes={availableTimes} 
+              updateTimes={handleUpdateTimes} 
+            />
+          } 
+        />
         <Route path="/*" element={<MainRoutes />} />
       </Routes>
       <Footer />
     </div>
   );
-};
+}
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  <React.StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </StrictMode>
+  </React.StrictMode>
 );
