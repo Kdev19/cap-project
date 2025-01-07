@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import Herosection from './components/Herosection';
 import BookingPage from './components/BookingPage';
 import MainRoutes from './components/MainRoutes';
+import BookingForm from './components/BookingForm';
 
 const App = () => {
   const [availableTimes, setAvailableTimes] = useState([
@@ -21,7 +22,7 @@ const App = () => {
       <Nav />
       <Routes>
         <Route path="/booking" element={<BookingPage availableTimes={availableTimes} />} />
-        <Route path="/*" element={<MainRoutes />} />
+        <Route path="/*" element={<MainRoutes availableTimes={availableTimes} />} />
       </Routes>
       <Footer />
     </div>

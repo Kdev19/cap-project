@@ -3,8 +3,12 @@ import Herosection from './Herosection';
 import Highlights from './Highlights';
 import Testimonials from './Testimonials';
 import About from './About';
+import BookingForm from './BookingForm';
 
-const MainRoutes = () => {
+const MainRoutes = ({ availableTimes }) => {
+  const formData = {}; // Initialize formData as needed
+  const handleChange = () => {}; // Define handleChange as needed
+
   return (
     <>
       <section id="home">
@@ -18,6 +22,9 @@ const MainRoutes = () => {
       </section>
       <section id="about">
         <About />
+      </section>
+      <section id="booking">
+        <BookingForm availableTimes={availableTimes} formData={formData} handleChange={handleChange} />
       </section>
     </>
   );

@@ -1,49 +1,12 @@
 import React, { useState } from 'react';
 import './BookingForm.css';
 
-const BookingForm = ({ availableTimes }) => {
-    const [formData, setFormData] = useState({
-        date: '',
-        time: '',
-        guests: 1,
-        occasion: ''
-    });
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value
-        });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Handle form submission logic here
-        console.log('Form submitted:', formData);
-    };
-
+const BookingForm = ({ availableTimes, formData, handleChange }) => {
     return (
-        <form className="booking-form" onSubmit={handleSubmit}>
-            <label htmlFor="res-date">Choose date</label>
-            <input
-                type="date"
-                id="res-date"
-                name="date"
-                value={formData.date}
-                onChange={handleChange}
-                required
-            />
-            <label htmlFor="res-time">Choose time</label>
-            <select
-                id="res-time"
-                name="time"
-                value={formData.time}
-                onChange={handleChange}
-                required
-            >
-                <option value="">Select time</option>
-                {availableTimes.map((time, index) => (
+        <form>
+            <label htmlFor="time">Choose a time:</label>
+            <select id="time" name="time" value={formData.time} onChange={handleChange} required>
+                {availableTimes && availableTimes.map((time, index) => (
                     <option key={index} value={time}>{time}</option>
                 ))}
             </select>
