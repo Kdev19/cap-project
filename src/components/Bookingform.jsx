@@ -1,11 +1,11 @@
 import React from 'react';
 import './BookingForm.css';
 
-const BookingForm = ({ availableTimes, formData, handleChange }) => {
+const BookingForm = ({ availableTimes, formData, handleChange, handleSubmit }) => {
     console.log('availableTimes:', availableTimes); // Log the availableTimes prop
 
     return (
-        <form className="booking-form">
+        <form className="booking-form" onSubmit={handleSubmit}>
             <label htmlFor="date">Choose a date:</label>
             <input
                 type="date"

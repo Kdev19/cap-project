@@ -1,0 +1,17 @@
+.booking-slot {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.booking-slot.booked {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.booking-slot.available {
+  background-color: #d4edda;
+  color: #155724;
+}
