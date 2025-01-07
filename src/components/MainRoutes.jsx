@@ -3,12 +3,9 @@ import Herosection from './Herosection';
 import Highlights from './Highlights';
 import Testimonials from './Testimonials';
 import About from './About';
-import BookingForm from './BookingForm';
+import BookingPage from './BookingPage';
 
 const MainRoutes = ({ availableTimes }) => {
-  const formData = {}; // Initialize formData as needed
-  const handleChange = () => {}; // Define handleChange as needed
-
   return (
     <>
       <section id="home">
@@ -24,7 +21,7 @@ const MainRoutes = ({ availableTimes }) => {
         <About />
       </section>
       <section id="booking">
-        <BookingForm availableTimes={availableTimes} formData={formData} handleChange={handleChange} />
+        <BookingPage availableTimes={availableTimes} />
       </section>
     </>
   );

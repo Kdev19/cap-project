@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './BookingForm.css';
 
 const BookingForm = ({ availableTimes, formData, handleChange }) => {
     console.log('availableTimes:', availableTimes); // Log the availableTimes prop
 
     return (
-        <form>
+        <form className="booking-form">
             <label htmlFor="time">Choose a time:</label>
             <select id="time" name="time" value={formData.time} onChange={handleChange} required>
                 {availableTimes && availableTimes.map((time, index) => (
