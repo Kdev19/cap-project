@@ -2,8 +2,4 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border: 1px solid #ccc; /* Add border */
-  border-radius: 8px; /* Optional: Add border radius for rounded corners */
-  padding: 20px; /* Optional: Add padding inside the border */
-  background-color: #f9f9f9; /* Optional: Add background color */
 }
