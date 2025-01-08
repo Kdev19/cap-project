@@ -1,6 +1,6 @@
 import { StrictMode, useReducer } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
 import './index.css';
 import Nav from './components/Nav';
 import Highlights from './components/Highlights';
@@ -12,8 +12,8 @@ import BookingPage from './components/BookingPage';
 import MainRoutes from './components/MainRoutes';
 import ConfirmedBooking from './components/ConfirmedBooking';
 
-// Import the fetchAPI function from the local script
-import { fetchAPI } from './api';
+// Import the fetchAPI and submitAPI functions from the local script
+import { fetchAPI, submitAPI } from './api';
 
 // Update initializeTimes function to use fetchAPI
 const initializeTimes = () => {
@@ -31,14 +31,22 @@ const updateTimes = (state, action) => {
   }
 };
 
+// Set up submitForm function
+const submitForm = (formData, navigate) => {
+  if (submitAPI(formData)) {
+    navigate('/confirmed', { state: { bookingDetails: formData } });
+  }
+};
+
 const App = () => {
   const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
+  const navigate = useNavigate();
 
   return (
     <div className="page-container">
       <Nav />
       <Routes>
-        <Route path="/booking" element={<BookingPage availableTimes={availableTimes} dispatch={dispatch} />} />
+        <Route path="/booking" element={<BookingPage availableTimes={availableTimes} dispatch={dispatch} submitForm={(formData) => submitForm(formData, navigate)} />} />
         <Route path="/confirmed" element={<ConfirmedBooking />} />
         <Route path="/*" element={<MainRoutes availableTimes={availableTimes} dispatch={dispatch} />} />
       </Routes>
