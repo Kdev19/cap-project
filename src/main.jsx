@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import Herosection from './components/Herosection';
 import BookingPage from './components/BookingPage';
 import MainRoutes from './components/MainRoutes';
+import ConfirmedBooking from './components/ConfirmedBooking';
 
 // Import the fetchAPI function from the local script
 import { fetchAPI } from './api';
@@ -38,6 +39,7 @@ const App = () => {
       <Nav />
       <Routes>
         <Route path="/booking" element={<BookingPage availableTimes={availableTimes} dispatch={dispatch} />} />
+        <Route path="/confirmed" element={<ConfirmedBooking />} />
         <Route path="/*" element={<MainRoutes availableTimes={availableTimes} dispatch={dispatch} />} />
       </Routes>
       <Footer />

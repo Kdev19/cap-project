@@ -1,0 +1,35 @@
+.confirmed-booking {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+.confirmed-booking h1 {
+  color: #4caf50;
+}
+
+.booking-details {
+  margin: 20px 0;
+}
+
+.booking-details p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.back-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #45a049;
+}

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import BookingForm from './BookingForm';
 import BookingList from './BookingList';
 import './BookingPage.css';
 
 const BookingPage = ({ availableTimes, dispatch }) => {
-    console.log('availableTimes:', availableTimes); // Log the availableTimes prop
+    const navigate = useNavigate(); // Use the useNavigate hook
 
     const [formData, setFormData] = useState({
         date: '',
@@ -27,6 +28,7 @@ const BookingPage = ({ availableTimes, dispatch }) => {
         e.preventDefault();
         if (formData.time && !bookedTimes.includes(formData.time)) {
             setBookedTimes([...bookedTimes, formData.time]);
+            navigate('/confirmed', { state: { bookingDetails: formData } }); // Navigate to the confirmation screen
         }
     };
 
