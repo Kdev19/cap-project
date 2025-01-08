@@ -6,7 +6,7 @@ const BookingForm = ({ availableTimes, formData, handleChange, handleSubmit, dis
 
     const handleDateChange = (e) => {
         handleChange(e);
-        dispatch({ type: 'UPDATE_TIMES', date: e.target.value });
+        dispatch({ type: 'UPDATE_TIMES', payload: e.target.value });
     };
 
     return (

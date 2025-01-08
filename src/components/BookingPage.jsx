@@ -13,7 +13,7 @@ const BookingPage = ({ availableTimes, dispatch }) => {
         occasion: ''
     });
 
-    const [bookedTimes, setBookedTimes] = useState(['18:00', '20:00']); // Example booked times
+    const [bookedTimes, setBookedTimes] = useState(['18:00', '20:00']);
 
     const handleChange = (e) => {
         const { name, value } = e.target;

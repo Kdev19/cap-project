@@ -11,21 +11,20 @@ import Herosection from './components/Herosection';
 import BookingPage from './components/BookingPage';
 import MainRoutes from './components/MainRoutes';
 
-// Define initializeTimes function
+// Import the fetchAPI function from the local script
+import { fetchAPI } from './api';
+
+// Update initializeTimes function to use fetchAPI
 const initializeTimes = () => {
-  return [
-    '17:00', '18:00', '19:00', '20:00', '21:00', '22:00'
-  ];
+  const today = new Date();
+  return fetchAPI(today);
 };
 
-// Define updateTimes function
+// Update updateTimes function to use fetchAPI with the dispatched selected date
 const updateTimes = (state, action) => {
   switch (action.type) {
     case 'UPDATE_TIMES':
-      // For now, return the same available times regardless of the date
-      return [
-        '17:00', '18:00', '19:00', '20:00', '21:00', '22:00'
-      ];
+      return fetchAPI(new Date(action.payload));
     default:
       return state;
   }
