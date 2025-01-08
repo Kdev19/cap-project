@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './BookingForm.css';
 
 const BookingForm = ({ availableTimes, formData, handleChange, handleSubmit, dispatch }) => {
-    console.log('availableTimes:', availableTimes); // Log the availableTimes prop
+    const [isFormValid, setIsFormValid] = useState(false);
+
+    useEffect(() => {
+        const isValid = formData.date && formData.time && formData.guests > 0 && formData.occasion;
+        setIsFormValid(isValid);
+    }, [formData]);
 
     const handleDateChange = (e) => {
         handleChange(e);
@@ -50,7 +55,12 @@ const BookingForm = ({ availableTimes, formData, handleChange, handleSubmit, dis
                 <option value="birthday">Birthday</option>
                 <option value="anniversary">Anniversary</option>
             </select>
-            <input type="submit" value="Make Your reservation" />
+            <input
+                type="submit"
+                value="Make Your reservation"
+                disabled={!isFormValid}
+                className={isFormValid ? 'enabled' : 'disabled'}
+            />
         </form>
     );
 };
