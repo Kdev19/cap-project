@@ -4,7 +4,7 @@ import BookingForm from './BookingForm';
 import BookingList from './BookingList';
 import './BookingPage.css';
 
-const BookingPage = ({ availableTimes, dispatch }) => {
+const BookingPage = ({ availableTimes, dispatch, submitForm }) => {
     const navigate = useNavigate(); // Use the useNavigate hook
 
     const [formData, setFormData] = useState({
@@ -28,23 +28,29 @@ const BookingPage = ({ availableTimes, dispatch }) => {
         e.preventDefault();
         if (formData.time && !bookedTimes.includes(formData.time)) {
             setBookedTimes([...bookedTimes, formData.time]);
-            navigate('/confirmed', { state: { bookingDetails: formData } }); // Navigate to the confirmation screen
+            submitForm(formData, navigate); // Use the submitForm function
         }
     };
 
     return (
-        <div className="booking-page">
-            <h1>Book a Reservation</h1>
-            <BookingForm
-                availableTimes={availableTimes}
-                formData={formData}
-                handleChange={handleChange}
-                handleSubmit={handleSubmit}
-                dispatch={dispatch}
-            />
-            <h2>Available Slots</h2>
-            <BookingList availableTimes={availableTimes} bookedTimes={bookedTimes} />
-        </div>
+        <main className="booking-page">
+            <header>
+                <h1>Book a Reservation</h1>
+            </header>
+            <section>
+                <BookingForm
+                    availableTimes={availableTimes}
+                    formData={formData}
+                    handleChange={handleChange}
+                    handleSubmit={handleSubmit}
+                    dispatch={dispatch}
+                />
+            </section>
+            <section>
+                <h2>Available Slots {formData.date && `for ${formData.date}`}</h2>
+                <BookingList availableTimes={availableTimes} bookedTimes={bookedTimes} />
+            </section>
+        </main>
     );
 };
 
