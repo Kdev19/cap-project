@@ -6,7 +6,9 @@ const Herosection = () => {
         <section className="hero-section">
             <div className="hero-content">
                 <div className="hero-left">
-                    <h1 className="hero-title">Welcome to Our Restaurant</h1>
+                    <header>
+                        <h1 className="hero-title">Welcome to Our Restaurant</h1>
+                    </header>
                     <p className="hero-description">
                         Enjoy the finest dining experience with our exquisite menu and exceptional service.
                     </p>
