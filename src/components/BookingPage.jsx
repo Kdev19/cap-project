@@ -34,16 +34,22 @@ const BookingPage = ({ availableTimes, dispatch }) => {
 
     return (
         <div className="booking-page">
-            <h1>Book a Reservation</h1>
-            <BookingForm
-                availableTimes={availableTimes}
-                formData={formData}
-                handleChange={handleChange}
-                handleSubmit={handleSubmit}
-                dispatch={dispatch}
-            />
-            <h2>Available Slots</h2>
-            <BookingList availableTimes={availableTimes} bookedTimes={bookedTimes} />
+            <header>
+                <h1>Book a Reservation</h1>
+            </header>
+            <section>
+                <BookingForm
+                    availableTimes={availableTimes}
+                    formData={formData}
+                    handleChange={handleChange}
+                    handleSubmit={handleSubmit}
+                    dispatch={dispatch}
+                />
+            </section>
+            <section>
+                <h2>Available Slots</h2>
+                <BookingList availableTimes={availableTimes} bookedTimes={bookedTimes} />
+            </section>
         </div>
     );
 };

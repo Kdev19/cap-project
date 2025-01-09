@@ -3,15 +3,17 @@ import './About.css';
 
 const About = () => {
     return (
-        <div className="about-container">
-            <div className="about-left">
-                <h1>About Us</h1>
+        <section className="about-container">
+            <article className="about-left">
+                <header>
+                    <h1>About Us</h1>
+                </header>
                 <p>Mario and Adrian started Little Lemon with a big dream</p>
-            </div>
-            <div className="about-right">
+            </article>
+            <aside className="about-right">
                 <img src="path/to/photo.jpg" alt="Description" className="about-image" />
-            </div>
-        </div>
+            </aside>
+        </section>
     );
 };
 
