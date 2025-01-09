@@ -1,5 +1,6 @@
 import React from 'react';
 import './Herosection.css';
+import house from '../assets/house.jpg';
 
 const Herosection = () => {
     return (
@@ -16,7 +17,7 @@ const Herosection = () => {
                 </div>
                 <div className="hero-right">
                     <div className="image-holder">
-                        {/* Image can be added here */}
+                        {house && <img src={house} alt="House" className="hero-image" />}
                     </div>
                 </div>
             </div>

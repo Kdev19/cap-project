@@ -1,32 +1,36 @@
 import React from 'react';
 import './Testimonials.css';
+import bald from '../assets/bald.jpg';
+import blond1 from '../assets/blond1.jpg';
+import blond2 from '../assets/blond2.png';
+import olderman from '../assets/olderman.jpg';
 
 const testimonials = [
     {
         id: 1,
         name: 'John Doe',
-        photo: 'path/to/photo1.jpg',
+        photo: bald,
         rating: 5,
         review: 'This is an amazing product! Highly recommend it.',
     },
     {
         id: 2,
         name: 'Jane Smith',
-        photo: 'path/to/photo2.jpg',
+        photo: blond1,
         rating: 4,
         review: 'Great value for the price. Will buy again.',
     },
     {
         id: 3,
         name: 'Sam Wilson',
-        photo: 'path/to/photo3.jpg',
+        photo: blond2,
         rating: 5,
         review: 'Exceeded my expectations. Fantastic!',
     },
     {
         id: 4,
         name: 'Sara Lee',
-        photo: 'path/to/photo4.jpg',
+        photo: olderman,
         rating: 3,
         review: 'It’s good, but there’s room for improvement.',
     },

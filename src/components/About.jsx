@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import marioadrian from '../assets/marioadrian.jpg';
 
 const About = () => {
     return (
@@ -11,7 +12,7 @@ const About = () => {
                 <p>Mario and Adrian started Little Lemon with a big dream</p>
             </article>
             <aside className="about-right">
-                <img src="path/to/photo.jpg" alt="Description" className="about-image" />
+                <img src={marioadrian} alt="Description" className="about-image" />
             </aside>
         </section>
     );

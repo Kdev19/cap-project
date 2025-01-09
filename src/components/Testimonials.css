@@ -34,17 +34,18 @@
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 300px;
+    text-align: center; /* Center text in the card */
 }
 
 .testimonial-photo {
-    width: 100%;
+    width: 60%;
     height: auto;
     border-radius: 50%;
 }
 
 .testimonial-content {
     text-align: center;
-    color: white; /* Updated regular text color */
+    color: black; /* Updated regular text color */
 }
 
 .testimonial-rating {
@@ -54,7 +55,7 @@
 
 .testimonial-review {
     font-size: 1rem;
-    color: white; /* Updated regular text color */
+    color: black; /* Updated regular text color */
 }
 
 .testimonial-card h3 {
@@ -66,4 +67,8 @@
 .testimonial-card p {
     font-size: 1rem;
     color: black; /* Updated regular text color */
+}
+
+.testimonial-card figcaption {
+    font-weight: bold; /* Make the name bold */
 }
