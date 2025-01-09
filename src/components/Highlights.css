@@ -1,5 +1,6 @@
 .highlights-container {
     padding: 20px;
+    background-color: #495E47; /* Updated background color */
 }
 
 .header {
@@ -11,6 +12,7 @@
 
 .header h2 {
     font-size: 1.5rem;
+    color: #F4CE14; /* Updated header text color */
 }
 
 .online-menu-button {
@@ -35,6 +37,7 @@
 
 .card {
     flex: 1;
+    background-color: white; /* Updated card background color */
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
@@ -48,6 +51,7 @@
 
 .card-content {
     padding: 10px;
+    color: black; /* Updated regular text color */
 }
 
 .card-content h3 {

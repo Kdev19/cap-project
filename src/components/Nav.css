@@ -5,6 +5,8 @@
     padding: 20px;
     background-color: #333;
     color: white;
+    border-bottom-left-radius: 16px; /* Rounded lower left border */
+    border-bottom-right-radius: 16px; /* Rounded lower right border */
 }
 
 .logo img {
