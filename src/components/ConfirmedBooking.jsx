@@ -17,13 +17,15 @@ const ConfirmedBooking = () => {
 
   return (
     <div className="confirmed-booking">
-      <h1>Booking Confirmed!</h1>
-      <div className="booking-details">
+      <header>
+        <h1>Booking Confirmed!</h1>
+      </header>
+      <article className="booking-details">
         <p><strong>Date:</strong> {bookingDetails.date}</p>
         <p><strong>Time:</strong> {bookingDetails.time}</p>
         <p><strong>Guests:</strong> {bookingDetails.guests}</p>
         <p><strong>Occasion:</strong> {bookingDetails.occasion}</p>
-      </div>
+      </article>
       <button className="back-button" onClick={handleBack}>Back to Home</button>
     </div>
   );
