@@ -1,5 +1,8 @@
 import React from 'react';
 import './Highlights.css';
+import pasta from '../assets/pasta.jpg';
+import salad from '../assets/salad.jpg';
+import tomatosw from '../assets/tomatosw.jpg';
 
 const Highlights = () => {
     return (
@@ -10,26 +13,26 @@ const Highlights = () => {
             </header>
             <div className="cards-container">
                 <article className="card">
-                    <img src="image1.jpg" alt="Dish 1" className="card-image" />
+                    <img src={pasta} alt="Pasta" className="card-image" />
                     <div className="card-content">
-                        <h3>Dish Name 1</h3>
-                        <p>Description of the dish 1.</p>
+                        <h3>Spaghetti Carbonara</h3>
+                        <p>A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper.</p>
                         <a href="#" className="order-link">Order a delivery</a>
                     </div>
                 </article>
                 <article className="card">
-                    <img src="image2.jpg" alt="Dish 2" className="card-image" />
+                    <img src={salad} alt="Salad" className="card-image" />
                     <div className="card-content">
-                        <h3>Dish Name 2</h3>
-                        <p>Description of the dish 2.</p>
+                        <h3>Caesar Salad</h3>
+                        <p>Fresh romaine lettuce, croutons, and Parmesan cheese, tossed in Caesar dressing.</p>
                         <a href="#" className="order-link">Order a delivery</a>
                     </div>
                 </article>
                 <article className="card">
-                    <img src="image3.jpg" alt="Dish 3" className="card-image" />
+                    <img src={tomatosw} alt="Tomato Sandwich" className="card-image" />
                     <div className="card-content">
-                        <h3>Dish Name 3</h3>
-                        <p>Description of the dish 3.</p>
+                        <h3>Tomato Basil Sandwich</h3>
+                        <p>A delicious sandwich with fresh tomatoes, basil, mozzarella, and a drizzle of balsamic glaze.</p>
                         <a href="#" className="order-link">Order a delivery</a>
                     </div>
                 </article>

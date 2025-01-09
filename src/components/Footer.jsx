@@ -1,11 +1,12 @@
 import React from 'react';
 import './Footer.css';
+import logo from '../assets/logo.jpg';
 
 const Footer = () => {
     return (
         <footer className="footer-container">
             <div className="footer-logo">
-                <img src="path/to/logo.png" alt="Company Logo" />
+                <img src={logo} alt="Company Logo" />
             </div>
             <div className="footer-section">
                 <h3>Contact Us</h3>
