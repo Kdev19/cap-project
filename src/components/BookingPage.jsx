@@ -33,7 +33,7 @@ const BookingPage = ({ availableTimes, dispatch }) => {
     };
 
     return (
-        <div className="booking-page">
+        <div id="booking-section" className="booking-page">
             <header>
                 <h1>Book a Reservation</h1>
             </header>

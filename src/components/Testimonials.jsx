@@ -29,7 +29,7 @@ const testimonials = [
     },
     {
         id: 4,
-        name: 'Sara Lee',
+        name: 'Lee Jones',
         photo: olderman,
         rating: 3,
         review: 'It’s good, but there’s room for improvement.',

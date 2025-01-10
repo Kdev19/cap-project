@@ -10,7 +10,7 @@
 }
 
 .testimonials-section header h2 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: #F4CE14; /* Updated header text color */
 }
 
@@ -34,7 +34,7 @@
     padding: 10px;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
+    max-width: 220px;
     text-align: center; /* Center text in the card */
 }
 
