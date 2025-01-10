@@ -2,13 +2,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 0px;
     background-color: #495E47; /* Updated background color */
+    margin-top: 40px;
+    border-radius: 16px;
 }
 
 .about-left {
     flex: 1;
     padding-right: 20px;
+    margin: 20px; 
 }
 
 .about-left h1 {
@@ -27,6 +30,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 20px;
 }
 
 .about-image {

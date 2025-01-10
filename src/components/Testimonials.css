@@ -1,6 +1,7 @@
 .testimonials-section {
     padding: 20px;
     background-color: #495E47; /* Updated background color */
+    border-radius: 16px;
 }
 
 .testimonials-section header {
