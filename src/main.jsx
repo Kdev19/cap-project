@@ -11,6 +11,7 @@ import Herosection from './components/Herosection';
 import BookingPage from './components/BookingPage';
 import MainRoutes from './components/MainRoutes';
 import ConfirmedBooking from './components/ConfirmedBooking';
+import React from 'react';
 
 // Import the fetchAPI and submitAPI functions from the local script
 import { fetchAPI, submitAPI } from './api';
